@@ -1,0 +1,327 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.montserrat-custom {
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.tint {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: linear-gradient(
+    rgba(0, 0, 0, 0.6) 0%,
+    rgba(0, 0, 0, 0.2) 50%,
+    rgba(0, 0, 0, 0) 100%
+  );
+  z-index: 1;
+}
+
+.hero {
+  height: 100vh;
+  width: 100vw;
+  background-image: url("../assests/hotelimg1.avif");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  background-size: cover;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.herotxt {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: left;
+  color: #fff;
+  z-index: 2;
+  width: 80%;
+  max-width: 1000px;
+}
+
+.hero-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.hero-left {
+  flex: 1;
+}
+
+.hero-title {
+  font-family: "Story Script", cursive;
+  font-size: 4rem;
+  font-weight: 500;
+  letter-spacing: 2px;
+  opacity: 0;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.9);
+  animation: fadeIn 2s ease forwards;
+}
+
+.hero-subtitle {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.5rem;
+  margin-top: 1rem;
+  opacity: 0;
+  text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.9);
+  animation: fadeIn 2s ease forwards;
+  animation-delay: 1s;
+}
+
+.hero-divider {
+  width: 2px;
+  height: 120px;
+  background: rgba(255, 255, 255, 0.9);
+  opacity: 0;
+  animation: dividerFade 2s ease forwards;
+  animation-delay: 1.5s;
+}
+
+.hero-right {
+  flex: 1.2;
+}
+
+.hero-desc {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.2rem;
+  line-height: 1.8;
+  opacity: 0;
+  text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.9);
+  animation: slideIn 2s ease forwards;
+  animation-delay: 2s;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes dividerFade {
+  from {
+    opacity: 0;
+    height: 0;
+  }
+  to {
+    opacity: 1;
+    height: 120px;
+  }
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.description {
+  width: 100vw;
+  height: fit-content;
+  margin-top: 10vh;
+  background-image: url("../assests/image.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  font-family: Arial, sans-serif;
+  text-align: center;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.description p {
+  max-width: 800px;
+  font-size: 1.2rem;
+  line-height: 1.6;
+  margin: 10px 0;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 1s ease-out forwards;
+  color: rgb(255, 253, 253);
+  text-shadow: 6px 6px 6px rgba(0, 0, 0, 0.9);
+  z-index: 3;
+}
+
+.description p.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.description p:nth-child(1) {
+  animation-delay: 0.5s;
+}
+
+.description p:nth-child(2) {
+  animation-delay: 1s;
+}
+
+.description p:nth-child(3) {
+  animation-delay: 1.5s;
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.tint1 {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: linear-gradient(
+    rgba(0, 0, 0, 0.8) 0%,
+    rgba(0, 0, 0, 0.6) 50%,
+    rgba(0, 0, 0, 0.4) 100%
+  );
+  z-index: 1;
+}
+
+.footer {
+  width: 100vw;
+  height: auto;
+  background: linear-gradient(270deg, #040404, #7b7979, #040404);
+  background-size: 600% 600%;
+  animation: shine 15s ease infinite;
+  color: rgba(255, 255, 255, 0.764);
+  padding: 20px 0;
+  font-family: Arial, sans-serif;
+}
+
+@keyframes shine {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.footer table {
+  width: 100%;
+  text-align: center;
+}
+
+.footer table tr td {
+  vertical-align: top;
+  padding: 20px;
+  width: 33%;
+}
+
+.footer img {
+  height: 80px;
+  margin-bottom: 10px;
+}
+
+.footer p {
+  margin: 10px 0;
+  line-height: 1.6;
+}
+
+.footer .social-links a {
+  color: #f4c542;
+  text-decoration: none;
+  margin: 0 5px;
+  font-size: 18px;
+  transition: color 0.3s;
+}
+
+.footer .social-links a:hover {
+  color: #fff176; /* brighter yellow on hover */
+}
+
+.footer form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.footer form input,
+.footer form textarea {
+  width: 90%;
+  padding: 8px;
+  margin: 5px 0;
+  border: none;
+  border-radius: 4px;
+}
+
+.footer form textarea {
+  height: 70px;
+  resize: none;
+}
+
+.footer form button {
+  padding: 8px 15px;
+  background-color: #f4c542;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 8px;
+  transition: background 0.3s;
+}
+
+.footer form button:hover {
+  background-color: #d9a632;
+}
+
+.footer-right hr {
+  margin-top: 25%;
+  border: 0;
+  height: 1px;
+  background: rgba(255,255,255,0.2);
+}
+
+.footer-right p {
+  margin-top: 25px;
+  font-size: 14px;
+  color: #ddd;
+}
+
+.btn {
+  display: none;
+  cursor: pointer;
+  position: fixed; 
+  bottom: 20px;
+  right: 30px;
+  z-index: 99;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: rgb(12, 12, 12);
+  color: white;
+  border: none;
+}
