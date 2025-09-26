@@ -1,0 +1,172 @@
+.hero-banner {
+  position: relative;
+  background: url("../assests/rooms/hero/image1.png") center/cover no-repeat;
+  height: 60vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #fff;
+}
+.hero-banner::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+}
+.hero-banner .banner-content {
+  position: relative;
+  z-index: 1;
+}
+.hero-banner h1 {
+  font-family: "Story Script", cursive;
+  font-size: 4rem;
+  font-weight: 500;
+  letter-spacing: 2px;
+  margin-bottom: 10px;
+}
+.hero-banner p {
+  font-family: "Story Script";
+  font-size: 1.2rem;
+  font-weight: 300;
+}
+
+/* SECTION HEADINGS */
+.rooms-section h2,
+.facilities-section h2 {
+  font-family: "Montserrat", sans-serif;
+  text-align: center;
+  font-size: 2.2rem;
+  margin: 60px 0 20px;
+  color: #222;
+}
+.rooms-section,
+.facilities-section {
+  padding: 20px 60px;
+}
+
+/* ROOMS GRID */
+.rooms-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 30px;
+  margin-top: 30px;
+}
+.room-card {
+  font-family: "Montserrat", sans-serif;
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.room-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+}
+.room-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+.room-card h3 {
+  margin: 15px 0 5px;
+  font-size: 1.4rem;
+  color: #222;
+}
+.room-card p {
+  font-size: 0.95rem;
+  padding: 0 15px;
+  color: #555;
+}
+.room-card .price {
+  display: block;
+  margin: 10px 0;
+  font-weight: 700;
+  color: #c59d5f;
+}
+.book-btn {
+  background: #c59d5f;
+  color: #fff;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  margin-bottom: 15px;
+}
+.book-btn:hover {
+  background: #a67c42;
+}
+
+/* FACILITIES GRID */
+.facilities-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 30px;
+  margin-top: 30px;
+  margin-bottom: 10vh;
+}
+.facility-card {
+  font-family: "Montserrat", sans-serif;
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  padding-bottom: 15px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.facility-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+}
+.facility-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+.facility-card h3 {
+  margin: 12px 0 6px;
+  font-size: 1.3rem;
+  color: #222;
+}
+.facility-card p {
+  font-size: 0.9rem;
+  color: #555;
+  padding: 0 12px;
+}
+
+/* BACK TO TOP BUTTON */
+.btn {
+  display: none;
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background: #c59d5f;
+  border: none;
+  border-radius: 50%;
+  padding: 15px;
+  cursor: pointer;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  transition: background 0.3s ease;
+  z-index: 1000;
+}
+.btn:hover {
+  background: #a67c42;
+}
+
+/* RESPONSIVENESS */
+@media (max-width: 768px) {
+  .hero-banner h1 {
+    font-size: 2.2rem;
+  }
+  .hero-banner p {
+    font-size: 1rem;
+  }
+  .rooms-section,
+  .facilities-section {
+    padding: 20px;
+  }
+}
