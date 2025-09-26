@@ -1,0 +1,107 @@
+.hero-banner {
+  position: relative;
+  background: url("../assests/contact/image.png") center/cover no-repeat;
+  height: 55vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #fff;
+}
+.hero-banner::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+}
+.hero-banner .banner-content {
+  position: relative;
+  z-index: 1;
+}
+.hero-banner h1 {
+  font-family: "Story Script", cursive;
+  font-size: 3.2rem;
+  animation: fadeIn 2s ease forwards;
+}
+.hero-banner p {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.2rem;
+  font-weight: 300;
+  animation: fadeIn 2s ease forwards;
+}
+
+.contact-section {
+  padding: 60px;
+  background: #f9f9f9;
+  animation: fadeIn 2s ease forwards;
+}
+.contact-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  justify-content: center;
+  max-width: 1100px;
+  margin: auto;
+}
+.contact-info {
+  flex: 1 1 350px;
+  background: #fff;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+.contact-info h2 {
+  font-family: "Montserrat", sans-serif;
+  margin-bottom: 15px;
+  color: #c59d5f;
+}
+.contact-info p {
+  font-family: "Montserrat", sans-serif;
+  margin: 12px 0;
+  font-size: 1rem;
+  color: #333;
+}
+.contact-info i {
+  font-family: "Montserrat", sans-serif;
+  color: #c59d5f;
+  margin-right: 10px;
+}
+
+.contact-form {
+  font-family: "Montserrat", sans-serif;
+  flex: 1 1 500px;
+  background: #fff;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+.contact-form h2 {
+  margin-bottom: 20px;
+  color: #c59d5f;
+}
+.contact-form form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.contact-form input,
+.contact-form textarea {
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1rem;
+}
+.contact-form button {
+  background: #c59d5f;
+  color: #fff;
+  padding: 12px;
+  border: none;
+  border-radius: 6px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+.contact-form button:hover {
+  background: #a77d4f;
+}
